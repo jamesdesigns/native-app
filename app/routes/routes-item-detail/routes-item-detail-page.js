@@ -16,11 +16,9 @@ const dialogsModule = require("tns-core-modules/ui/dialogs");
 
 // This is for the Alert Function
 exports.alertOgdenN = function () {
-  dialogsModule.alert({
+  dialogsModule.confirm({
     title: "North Bound",
-    titletwo: "South Bound",
-    message: "10:00 AM  11:00 AM  12:00 PM  2:00 PM  3:30 PM 4:00 PM  7:00 PM  10:00 PM 10:35 PM",
-    messagetwo: "8:00 AM  9:00 AM  10:00 AM  2:00 PM  3:30 PM 4:00 PM  7:00 PM  10:00 PM 10:35 PM",
+    message: "NO STOP   NO STOP   5:07 AM  5:37 AM  6:07 PM  6:37 PM  3:30 PM 4:00 PM  7:00 PM  10:00 PM 10:35 PM",
     okButtonText: "CLOSE"
   }).then(() => {
     console.log("The user closed the alert.");
@@ -28,9 +26,10 @@ exports.alertOgdenN = function () {
 };
 // This is for the Alert Function
 exports.alertOgdenS = function () {
-  dialogsModule.alert({
+  // dialogsModule.alert({
+    dialogsModule.confirm({
     title: "South Bound",
-    message: `8:00 AM  9:00 AM  10:00 AM  2:00 PM  3:30 PM 4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+    message: `6:00 AM  9:00 AM  10:00 AM  2:00 PM  3:30 PM 4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
     okButtonText: "CLOSE"
   }).then(() => {
     console.log("The user closed the alert.");

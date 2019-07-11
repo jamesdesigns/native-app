@@ -28,6 +28,8 @@
             
 
             <Button class="btn btn-primary m-t-10" text="North Bound" tap="alertOgdenN"></Button> 
+
+
 <!--             
             <Label class="m-10" row="0" col="0" colspan="2"  text="{{ northBound }}"> -->
             <Label class="m-10 h3" row="0" col="2" colspan="2" textWrap="true" text="{{ NBtimes }}"></Label>
