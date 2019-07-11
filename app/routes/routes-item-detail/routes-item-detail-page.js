@@ -13,7 +13,6 @@ const dialogsModule = require("tns-core-modules/ui/dialogs");
 
 // End of the Modal Feature code
 
-
 // This is for the Alert Function
 exports.alertOgdenN = function () {
   dialogsModule.confirm({
