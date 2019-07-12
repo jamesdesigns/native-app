@@ -1,4 +1,5 @@
 const topmost = require("tns-core-modules/ui/frame").topmost;
+
 let closeCallback;
 
 exports.onShownModally = function (args) {

@@ -14,7 +14,7 @@ exports.showModal = () => {
 
   // NEW
   var topmost = frameModule.topmost();
-  topmost.navigate("map/map-page");
+  topmost.navigate("favorites/favorites-page"); // This works, but something is wrong with the Modal pages!
   // END
 }
 
