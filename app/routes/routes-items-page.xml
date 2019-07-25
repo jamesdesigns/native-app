@@ -8,10 +8,10 @@
         <!-- <Label class="action-bar-title" text="Routes"></Label> -->
     </ActionBar>
 
-    <ListView items="{{ items }}" itemTap="onItemTap" class="list-group">
+    <ListView id="list_view" items="{{ items }}" itemTap="onItemTap" class="list-group">
         <ListView.itemTemplate>
             <StackLayout orientation="horizontal" class="list-group-item">
-                <Label text="&#xff08a;   "></Label>
+                <Label text= "{{ favorite ? '&#xff004; ' : '&#xff08a; '}}"></Label>
                 <Label text="{{ name }}" textWrap="true"></Label>
             </StackLayout>
         </ListView.itemTemplate>

@@ -29,22 +29,14 @@
          </GridLayout>   
     </ActionBar> -->
 
-        <StackLayout class="p-20">
-        <Label text="My Favorites" class="h2 text-center"/>
-          <Button text="&#xff08a;   Provo" tap="{{ onTap }}" class="my-button text-left" />
-          <Button text="&#xff08a;   Orem Central" tap="{{ onTap }}" class="my-button text-left" />
-          <Button text="&#xff08a;   American Fork" tap="{{ onTap }}" class="my-button text-left" />
-          <Button text="&#xff08a;   Lehi" tap="{{ onTap }}" class="my-button text-left" />
-          <Button text="&#xff004;   Draper" tap="{{ onTap }}" class="my-button text-left" />
-          <Button text="&#xff08a;   South Jordan" tap="{{ onTap }}" class="my-button text-left" />
-
-        <Button text="Add To Favorites" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
-     
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
-        <Label text=""/>
-        <!-- <Label text="Using LocalStorage to store the count, quit and re-open to see it saved!" textWrap="true"/> -->
-    
-    </StackLayout>
+    <ListView id="list_view" items="{{ items }}" itemTap="onItemTap" class="list-group">
+        <ListView.itemTemplate>
+            <StackLayout orientation="horizontal" class="list-group-item">
+                <Label text= "{{ favorite ? '&#xff004; ' : '&#xff08a; '}}"></Label>
+                <Label text="{{ name }}" textWrap="true"></Label>
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
 
   
 

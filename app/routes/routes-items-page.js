@@ -17,7 +17,18 @@ function onItemTap(args) {
     const view = args.view;
     const page = view.page;
     const tappedItem = view.bindingContext;
-
+    
+    const listView = page.getViewById('list_view');
+    
+    if (tappedItem.favorite) {
+        tappedItem.favorite = false;
+    }
+    else {
+        tappedItem.favorite = true;
+    }
+    localStorage[tappedItem.name] = tappedItem.favorite;
+    listView.refresh();
+/*
     // This originally belongs here
     page.frame.navigate({
         // moduleName: "home/home-item-detail/home-item-detail-page", 
@@ -29,7 +40,7 @@ function onItemTap(args) {
             duration: 200,
             curve: "ease"
         }
-    });
+    });*/
 }
 
 exports.showModal = function (args) {

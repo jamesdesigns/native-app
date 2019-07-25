@@ -9,7 +9,7 @@ const application = require("tns-core-modules/application");
 // End of adding new addition to the following above
 
 function RoutesItemsViewModel() {
-    const viewModel = observableModule.fromObject({
+    var viewModel = observableModule.fromObject({
         // New for Modal
         showModal() {
             const page = topmost().currentPage;
@@ -46,7 +46,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `NO STOP   NO STOP   5:07 AM   5:37 AM  6:07 AM  6:37 AM   7:07 AM   7:37 AM  8:07 AM  8:37 AM   9:37 AM   10:37 AM   11:37 AM   12:37 PM   1:37 PM   NO STOP   2:37 PM   3:07 PM   3:37 PM   4:07 PM   4:37 PM   5:07 PM   5:37 PM   6:07 PM   6:37 PM   7:07 PM   8:07 PM   9:07 PM   10:07 PM   10:37 PM   11:07 PM`,
-                SBtimes: `9:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `9:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Roy",
@@ -56,7 +57,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `10:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `10:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Clearfield",
@@ -66,7 +68,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `11:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `11:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Layton",
@@ -76,7 +79,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `12:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `12:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Farmington",
@@ -86,7 +90,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `1:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `1:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Woods Cross",
@@ -96,7 +101,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `2:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `2:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "North Temple",
@@ -106,7 +112,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `3:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `3:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Salt Lake Central",
@@ -116,7 +123,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `4:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `4:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Murray Central Station",
@@ -126,7 +134,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `5:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `5:00 PM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "South Jordan Station",
@@ -136,7 +145,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `7:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `7:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Draper Station",
@@ -146,7 +156,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `6:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `6:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Lehi Station",
@@ -156,7 +167,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `5:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `5:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "American Fork Station",
@@ -166,7 +178,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `4:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `4:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Orem Central",
@@ -176,7 +189,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `3:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `3:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             },
             {
                 name: "Provo Station",
@@ -186,7 +200,8 @@ function RoutesItemsViewModel() {
                 northBound: "North Bound",
                 southBound: "South Bound",
                 NBtimes: `8:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
-                SBtimes: `2:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`
+                SBtimes: `2:00 AM   9:00 AM  10:00 AM  2:00 PM   3:30 PM    4:00 PM  7:00 PM  10:00 PM 10:35 PM`,
+                favorite: false
             }
         ],
 
